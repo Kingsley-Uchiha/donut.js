@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,24 +8,263 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <style>
     * {
-      font-family: "Fira Code";
+      font-family: "Fira Code", monospace;
+      margin: 0;
+      padding: 0;
     }
 
+    header *::selection {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    header {
+      background-color: chocolate;
+      background-color: rgb(166, 83, 24);
+    }
     body {
-      background-color: #000;
-      color: #fff;
+      padding-bottom: 100px;
     }
 
     #d {
       font-weight: 200;
     }
+
+    .a {
+      /* #d2691e */
+      /* #d57124 */
+      color: #d9792b;
+    }
+
+    .b {
+      color: #dc8131;
+    }
+
+    .c {
+      color: #e08937;
+    }
+
+    .d {
+      color: #e3913e;
+    }
+
+    .e {
+      color: #e79944;
+    }
+
+    .f {
+      color: #eaa14a;
+    }
+
+    .g {
+      color: #eea950;
+    }
+
+    .h {
+      color: #f1b157;
+    }
+
+    .i {
+      color: #f5b95d;
+    }
+
+    .j {
+      color: #f8c163;
+    }
+
+    .k {
+      color: #fcc96a;
+    }
+
+    .l {
+      color: #ffd170;
+    }
+
+    .dough {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 100px;
+    }
+
+    .dough h1 {
+      color: #fff;
+      font-size: 3rem;
+      padding-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+    }
+
+    a,
+    button {
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #dc8131;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    a:hover,
+    button:hover {
+      transition: all .2s;
+      background-color: #e08937;
+    }
+
+    a:active,
+    button:active {
+      scale: .9;
+    }
+
+    .canv {
+      padding: 20px 100px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    canvas {
+      border-radius: 8px;
+    }
+    .canv p {
+      max-width: 500px;
+    }
+    .code {
+      background-color: #eee;
+      padding: 30px;
+      border-left: 20px solid #999;
+      border-radius: 8px;
+      height: 500px;
+      overflow-y: scroll;
+      white-space: nowrap;
+      margin: 0 100px;
+    }
+    .code::-webkit-scrollbar-track {
+      background-color: #eee;
+      border: none;
+    }
+    .code::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 8px;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 20px;
+      color: #fff;
+      /* 61b0ff */
+      /* ffe000 */
+      /* ff3ead */
+    }
+
+    .logo span {
+      color: #ffe000;
+    }
   </style>
 </head>
-<body>
-  <br><br><br>
-  <div id="d"></div>
-  <canvas id="canvasdonut"></canvas>
 
+<body>
+  <header>
+    <div class="logo">
+      Donut<span>.js</span>
+    </div>
+    <div class="dough">
+      <div class="txt">
+        <h1>Hire me now, and get a cool Donut in your website!</h1>
+        <div class="btns">
+          <a href="mailto:ibhasebhorkingsley@gmail.com">
+            ibhasebhorkingsley@gmail.com
+          </a>
+          <button title="Copy email">copy</button>
+        </div>
+      </div>
+      <div id="d"></div>
+    </div>
+  </header>
+  <br><br><br>
+  <div class="canv">
+    <div class="txt">
+      <h1>Canvas Implimentation of Donut</h1>
+      <br><br>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis est, totam debitis modi accusantium eos
+        laboriosam doloremque. Nulla corrupti suscipit quisquam beatae cupiditate voluptatem maiores fuga temporibus,
+        enim, esse voluptatum! Tempore ratione sunt iure?
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis est, totam debitis modi accusantium eos
+        laboriosam doloremque. Nulla corrupti suscipit quisquam beatae cupiditate voluptatem maiores fuga temporibus,
+        enim, esse voluptatum! Tempore ratione sunt iure?
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis est, totam debitis modi accusantium eos
+        laboriosam doloremque.
+      </p>
+    </div>
+    <canvas id="canvasdonut"></canvas>
+  </div>
+  <br><br><br>
+  <div class="code">
+    // * random code to make me seem smart 🤓 <br><br>
+    // This is a reimplementation according to donut.c's math derivation on [githubRepo]<br>
+    const R1 = 1; <br>
+    const R2 = 2; <br>
+    const K1 = 150; <br>
+    const K2 = 5; <br>
+    const canvasframe = function () { <br>
+    &nbsp;&nbsp;const ctx = canvastag.getContext("2d"); <br>
+    &nbsp;&nbsp;ctx.fillStyle = "#000"; <br>
+    &nbsp;&nbsp;ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height); <br>
+    &nbsp;&nbsp;// precompute cosines and sines of A, B, theta, phi, same as before <br>
+    &nbsp;&nbsp;const cA = Math.cos(A), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;sA = Math.sin(A), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;cB = Math.cos(B), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;sB = Math.sin(B); <br>
+    &nbsp;&nbsp;for (let j = 0; j < 6.28; j +=0.3) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// j <=> theta <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;const ct = Math.cos(j), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;st = Math.sin(j); // cosine theta, sine theta <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;for (i = 0; i < 6.28; i +=0.1) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// i <=> phi <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const sp = Math.sin(i), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cp = Math.cos(i); // cosine phi, sine phi <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const ox = R2 + R1 * ct, // object x, y = (R2,0,0) + (R1 cos theta, R1 sin
+    theta, 0)
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oy = R1 * st; <br>
+          <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const x = ox * (cB * cp + sA * sB * sp) - oy * cA * sB; // final 3D x
+    coordinate <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const y = ox * (sB * cp - sA * cB * sp) + oy * cA * cB; // final 3D y <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// * size // <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const ooz = 2 / (K2 + cA * ox * sp + sA * oy); // one over z <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const xp = 300 + K1 * ooz * x;<br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x' = screen space coordinate, translated and scaled to fit our 320x240 canvas element <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const yp = 270 - K1 * ooz * y;<br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// y' (it's negative here because in our output, positive y goes down but in our 3D space, positive y goes up) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// luminance, scaled back to 0 to 1 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const L =
+            0.7 *
+            (cp * ct * sB -
+              cA * ct * sp -
+              sA * st +
+              cB * (cA * st - ct * sA * sp)); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (L > 0) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = "rgba(255,255,255," + L + ")";<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillRect(xp, yp, 2, 2);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;}<br>
+    };
+  </div>
   <script src="./app.js"></script>
 </body>
+
 </html>

@@ -1,2 +1,4 @@
 # donut.js
-A 3d donut of text
+#
+I remade donut.c as donut.js
+$ // With cooler features
