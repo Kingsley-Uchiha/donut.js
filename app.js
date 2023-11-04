@@ -83,18 +83,18 @@ copyBtn.addEventListener("click", async (e) => {
             }
             [
               // a is blackest, l is brightest
-              "<span class='a'>.</span>",
-              "<span class='b'>,</span>",
-              "<span class='c'>-</span>",
-              "<span class='d'>~</span>",
-              "<span class='e'>:</span>",
-              "<span class='f'>;</span>",
-              "<span class='g'>=</span>",
-              "<span class='h'>!</span>",
-              "<span class='i'>*</span>",
-              "<span class='j'>#</span>",
-              "<span class='k'>$</span>",
-              "<span class='l'>@</span>",
+              ".",
+              ",",
+              "-",
+              "~",
+              ":",
+              ";",
+              "=",
+              "!",
+              "*",
+              "#",
+              "$",
+              "@",
             ];
           }
         }
